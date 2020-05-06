@@ -113,8 +113,21 @@ class Config {
     async init(config) {
         const defaultConfig = {
             //Customize options according to application needs
-            
-            
+            avalon: {
+                endpoint: "https://avalon.d.tube:443"
+            },
+            http: {
+                //Public API endpoint
+                host: "127.0.0.1",
+                port: 3000
+            },
+            Database: {
+                host: "127.0.0.1",
+                port: "27017",
+                database: "db_name",
+                user: "db_user",
+                password: "db_password"
+            }
         };
 
         this.config = config || defaultConfig;
