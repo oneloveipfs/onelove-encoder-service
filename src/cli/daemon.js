@@ -1,4 +1,4 @@
-const debug = require('debug')('pinza:daemon')
+const debug = require('debug')('daemon')
 const Core = require('../core'); //OneloveEncoderService client.
 const Components = require('../core/components')
 const Http = require('../http')

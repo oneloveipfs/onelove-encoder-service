@@ -34,11 +34,10 @@ async function main() {
   try {
     const data = await cli(command, async (argv) => {
       if (!['daemon', 'init'].includes(command[0])) {
-        const { pinza, isDaemon, cleanup } = await getInstance(argv)
+        const { isDaemon, cleanup } = await getInstance(argv)
 
         ctx = {
           ...ctx,
-          pinza,
           isDaemon,
           cleanup
         }

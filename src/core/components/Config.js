@@ -114,7 +114,7 @@ class Config {
         const defaultConfig = {
             //Customize options according to application needs
             avalon: {
-                endpoint: "https://avalon.d.tube:443"
+                endpoint: "https://avalon.d.tube"
             },
             http: {
                 //Public API endpoint
