@@ -20,11 +20,15 @@
     "datastore-level": "^0.14.1",
     "debug": "^4.1.1",
     "dlv": "^1.1.3",
+    "ffmpeg-static": "^4.2.1",
+    "ffprobe-static": "^3.0.0",
     "fluent-ffmpeg": "^2.1.2",
+    "ipfs-http-client": "^44.0.3",
     "javalon": "^1.0.22",
     "merge-options": "^2.0.0",
     "mongodb": "^3.5.7",
     "p-queue": "^6.4.0",
+    "tmp": "^0.2.1",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
