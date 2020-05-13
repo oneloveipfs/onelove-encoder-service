@@ -11,5 +11,20 @@ Pricing is calculated dynamically based upon video length, and a predecided cost
 Pricing metric has additional paramers based upon how long an encode typically takes for a particular resolution, file size, and quality.
 DTC, Steem, and hive will be accepted as payment through this system.
 
+### Install
+Github clone
+
+```
+git clone https://github.com/oneloveipfs/onelove-encoder-service
+cd onelove-encoder-service
+npm install
+```
+
+### Usage
+```
+npm run dev:daemon
+```
+Start a debug mode daemon with HTTP API on localhost:3000 by default.
+
 # License
 GPLv3. See [License](https://github.com/oneloveipfs/onelove-encoder-service/blob/master/LICENSE)
