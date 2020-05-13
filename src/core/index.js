@@ -14,13 +14,14 @@ class Core {
         this._options = mergeOptions(defaults, options);
         this.config = new Components.Config(Utils.datastore(this._options.path))
         this.avalon = Javalon;
+        this.dtube = new Components.Dtube(this)
         this.encoder = new Components.EncoderService(this);
         this.ipfs = new IPFSHTTPClient();
     }
     async start() {
         await this.config.open()
         this.avalon.config.api = [this.config.get("avalon.endpoint")]
-        //this.db = await Components.Mongodb(this.config.get("Database"))
+        this.db = await Components.Mongodb(this.config.get("Database"))
         this.encoder.start()
     }
     async stop() {

@@ -6,11 +6,23 @@ module.exports = [
             var {encoderService} = request.server.app;
             var {url} = request.query;
             try {
-                await encoderService.encoder.addToQueueFromdtube(url)
+                return h.response(await encoderService.encoder.addToQueueFromdtube(url))
             } catch (err) {
-                console.log(err)
+                return err
             }
-            return "Ok"
+        }
+    },
+    {
+        method: 'GET',
+        path: '/status',
+        handler: async function (request, h) { 
+            var {encoderService} = request.server.app;
+            var {id} = request.query;
+            try {
+                return h.response(await encoderService.encoder.getStatus(id))
+            } catch (err) {
+                return err
+            }
         }
     }
 ]
