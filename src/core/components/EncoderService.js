@@ -113,7 +113,7 @@ class EncoderWorker {
                 })
             })();
             var outHash;
-            for await (var out of this.ipfs.add(globSource(outputPath), { pin: false })) {
+            for await (var out of this.ipfs.add(globSource(outputPath), { pin: false, trickle: true })) {
                 outHash = out.cid
             }
             debug(`finished encoding for ${profileName}; Hash is ${outHash}`)
@@ -177,7 +177,7 @@ class EncoderService {
                         status: "running",
                         worker
                     }
-                    worker.once("completed", (id) => {
+                    worker.once("completed", async (id) => {
                         //id included for safety reasons and future changes
                         this.jobs[id] = {
                             status: "done"
